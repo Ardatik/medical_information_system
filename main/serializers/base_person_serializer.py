@@ -1,8 +1,7 @@
 import datetime
 from rest_framework import serializers
-from main.models import Person, Doctor, Patient, Admin
+from main.models import Doctor, Patient, Admin
 import re
-from django.contrib.auth.hashers import make_password
 
 
 class PersonSerializer(serializers.ModelSerializer):
@@ -103,5 +102,3 @@ class PersonSerializer(serializers.ModelSerializer):
         if errors:
             raise serializers.ValidationError(errors)
         return value
-
-    from django.contrib.auth.hashers import make_password
