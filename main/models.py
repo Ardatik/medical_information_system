@@ -10,7 +10,6 @@ class Person(models.Model):
     class SexChoices(models.TextChoices):
         MALE = "male", "Мужской"
         FEMALE = "female", "Женский"
-        OTHER = "other", "Другой"
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
