@@ -210,7 +210,11 @@ class DoctorEducation(models.Model):
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
     )
     doctor = models.ForeignKey(
-        Doctor, on_delete=models.CASCADE, related_name="educations", null=True, blank=True
+        Doctor,
+        on_delete=models.CASCADE,
+        related_name="educations",
+        null=True,
+        blank=True,
     )
     university = models.CharField(max_length=100, null=True, blank=True)
     faculty = models.CharField(max_length=100, null=True, blank=True)
