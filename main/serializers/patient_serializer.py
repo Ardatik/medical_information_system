@@ -1,4 +1,3 @@
-from rest_framework import serializers
 from .base_person_serializer import PersonSerializer
 from main.models import Patient
 from django.contrib.auth.hashers import make_password
