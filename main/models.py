@@ -75,7 +75,7 @@ class Doctor(Person):
     date_start_work = models.DateField()
     date_end_work = models.DateField(null=True, blank=True)
 
-    class Meta:
+    class Meta(Person.Meta):
         verbose_name = "Врач"
         verbose_name_plural = "Врачи"
 
@@ -102,13 +102,13 @@ class Doctor(Person):
 
 
 class Patient(Person):
-    class Meta:
+    class Meta(Person.Meta):
         verbose_name = "Пациент"
         verbose_name_plural = "Пациенты"
 
 
 class Admin(Person):
-    class Meta:
+    class Meta(Person.Meta):
         verbose_name = "Администратор"
         verbose_name_plural = "Администраторы"
 
