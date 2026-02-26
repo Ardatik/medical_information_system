@@ -14,7 +14,6 @@ class PersonSerializer(serializers.ModelSerializer):
             "last_name",
             "patronymic_name",
             "date_birth",
-            "sex",
             "sex_display",
             "age",
             "email",
